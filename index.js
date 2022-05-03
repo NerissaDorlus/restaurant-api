@@ -1,10 +1,10 @@
 import express from "express";
 import cors from "cors";
+import { addRestaurant, getAllRestaurants } from "./src/restaurants.js";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-
 //routes
 app.get("restaurants", getAllRestaurants);
 app.get("/restaurants/: restId", getRestaurantById);
